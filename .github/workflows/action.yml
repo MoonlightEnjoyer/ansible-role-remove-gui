@@ -30,4 +30,4 @@ jobs:
         run: yamllint -c yamllint.yml .
 
       - name: check ansible playboocks with ansible-lint
-        run: ansible-lint -v */*.yml
+        run: ansible-lint -v *.yml
