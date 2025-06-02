@@ -1,0 +1,14 @@
+---
+- name: Install "Minimal Install" group
+  yum:
+    name: '@Minimal Install'
+    state: present
+- name: Remove "Server with GUI" group
+  yum:
+    name: '@Server with GUI'
+    state: absent
+- name: Set default target
+  command: systemctl set-default multi-user.target
+- name: Reboot
+  reboot:
+    
